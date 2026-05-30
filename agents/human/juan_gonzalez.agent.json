@@ -1,0 +1,41 @@
+{
+  "agent_id": "juan_gonzalez",
+  "name": "Juan Gonzalez",
+  "title": "Intake Officer",
+  "role": "KYC/AML · Deal Screening",
+  "tier": -1,
+  "tier_label": "Pre-Pipeline Gate",
+  "type": "human",
+  "sequence": 1,
+  "blocking": true,
+  "note": "NOTHING enters the analysis pipeline without Juan Gonzalez clearance. Hard gate.",
+  "mandate": "Screen every deal and counterparty for KYC/AML compliance before the project enters the swarm. One failure blocks the entire pipeline.",
+  "responsibilities": [
+    "Counterparty identity verification — beneficial ownership chain to natural person",
+    "Sanctions screening — OFAC, UN, EU, HMT consolidated lists",
+    "PEP (Politically Exposed Person) identification and enhanced due diligence",
+    "AML red flag assessment — source of funds, transaction structuring",
+    "Deal authenticity check — project exists, vendor is contactable, assets are real",
+    "Jurisdiction risk pre-screen — FATF grey/black list countries require escalation",
+    "Conflict of interest check — LCS principals vs counterparty relationships",
+    "Documentation completeness for regulatory file — KYC pack assembly"
+  ],
+  "gate_outcomes": {
+    "PASS": "Project enters pipeline. KYC file created. ARIA ingestion authorised.",
+    "CONDITIONAL": "Pipeline entry permitted with enhanced monitoring. Specific conditions noted.",
+    "FAIL": "Pipeline blocked. No analysis performed. Client notified of reason."
+  },
+  "escalation_to": "Steven W. — Principal QP & CEO Founder",
+  "output_schema": {
+    "kyc_status": "PASS | CONDITIONAL | FAIL",
+    "counterparty_verified": "boolean",
+    "sanctions_clear": "boolean",
+    "pep_identified": "boolean",
+    "aml_risk_rating": "LOW | MEDIUM | HIGH | CRITICAL",
+    "jurisdiction_fatf_status": "string",
+    "conditions": "array of strings if CONDITIONAL",
+    "block_reason": "string if FAIL",
+    "kyc_file_reference": "string",
+    "gonzalez_clearance": "boolean"
+  }
+}
