@@ -1,0 +1,122 @@
+{
+  "engine": "Mine Advisory Service by LCS",
+  "version": "6.0.0",
+  "agent_count": {
+    "total": 16,
+    "ai": 12,
+    "human": 4
+  },
+  "ai_core": {
+    "domain_agents": "claude-sonnet-4-20250514",
+    "validation_agent": "claude-opus-4-20250514",
+    "max_tokens_per_agent": 4000,
+    "temperature": 0.1
+  },
+  "pipeline": {
+    "tier_negative1": {
+      "name": "Pre-Pipeline Gate",
+      "execution": "sequential",
+      "type": "human",
+      "agents": ["juan_gonzalez"],
+      "blocking": true,
+      "hard_gate": true,
+      "description": "KYC/AML clearance. FAIL = pipeline blocked entirely. No exceptions."
+    },
+    "tier0": {
+      "name": "Intake",
+      "execution": "sequential",
+      "type": "ai",
+      "agents": ["aria", "sigma"],
+      "blocking": true,
+      "description": "Document ingestion and gap mapping. Must complete before Tier 1."
+    },
+    "tier1": {
+      "name": "QP Domain Analysis",
+      "execution": "parallel",
+      "type": "mixed",
+      "agents": ["chen_geology", "okafor_mining", "marsh_metallurgy", "kyle_jackson", "rivera_environmental", "donovan_financial"],
+      "ai_agents": ["chen_geology", "okafor_mining", "marsh_metallurgy", "rivera_environmental", "donovan_financial"],
+      "human_agents": ["kyle_jackson"],
+      "blocking": true,
+      "description": "5 AI + 1 human domain expert running simultaneously."
+    },
+    "tier2": {
+      "name": "Cross-Domain Intelligence",
+      "execution": "parallel",
+      "type": "mixed",
+      "agents": ["sterling_quant", "vega_comparables", "jura_regulatory", "francis_nault"],
+      "ai_agents": ["sterling_quant", "vega_comparables", "jura_regulatory"],
+      "human_agents": ["francis_nault"],
+      "blocking": true,
+      "description": "3 AI + 1 human cross-domain running simultaneously."
+    },
+    "tier3": {
+      "name": "Validation Layer",
+      "execution": "sequential",
+      "type": "ai",
+      "agents": ["delta_qaqc", "phantom_fraud", "sirjuan_redteam"],
+      "blocking": true,
+      "description": "DELTA then PHANTOM then Sir Juan Miami (Opus 4). Sequential."
+    },
+    "tier4": {
+      "name": "Synthesis & Delivery",
+      "execution": "sequential",
+      "type": "ai",
+      "agents": ["apex_synthesis"],
+      "blocking": true,
+      "description": "APEX score computation and report generation."
+    },
+    "tier5": {
+      "name": "Principal Sign-Off",
+      "execution": "sequential",
+      "type": "human",
+      "agents": ["steven_w"],
+      "blocking": false,
+      "description": "Steven W. — Principal QP authority. Final institutional sign-off. Report release gate."
+    }
+  },
+  "scoring": {
+    "scale": "1-100",
+    "interpretation": "1=perfect, 100=critical_risk",
+    "thresholds": {
+      "investable": { "max_composite": 49, "traffic_light": "Green", "verdict": "Go" },
+      "conditional": { "min_composite": 50, "max_composite": 59, "traffic_light": "Amber", "verdict": "Conditional" },
+      "no_go": { "min_composite": 60, "traffic_light": "Red", "verdict": "No-Go" }
+    },
+    "section_weights": {
+      "resource_estimation": 0.09,
+      "drill_quality": 0.07,
+      "geological_continuity": 0.07,
+      "mining_method": 0.06,
+      "production_schedule": 0.06,
+      "dilution_recovery": 0.05,
+      "metallurgical_testwork": 0.07,
+      "processing_plant": 0.05,
+      "environmental_baseline": 0.06,
+      "social_licence": 0.04,
+      "capex_benchmarking": 0.07,
+      "opex_benchmarking": 0.06,
+      "revenue_pricing": 0.07,
+      "npv_irr": 0.08,
+      "financing_structure": 0.06,
+      "jurisdiction_regulatory": 0.05,
+      "team_credibility": 0.04,
+      "exit_strategy": 0.04
+    }
+  },
+  "human_agents": {
+    "juan_gonzalez": { "file": "agents/human/juan_gonzalez.agent.json", "tier": -1 },
+    "kyle_jackson":  { "file": "agents/human/kyle_jackson.agent.json",  "tier": 1 },
+    "francis_nault": { "file": "agents/human/francis_nault.agent.json", "tier": 2 },
+    "steven_w":      { "file": "agents/human/steven_w.agent.json",      "tier": 5 }
+  },
+  "branding": {
+    "platform": "Mine Advisory Service by LCS",
+    "version_tag": "v6.0 INSTITUTIONAL",
+    "organisation": "Lightman Trust Group",
+    "division": "Lightman Consultancy Services (LCS)",
+    "principal_qp": "Steven W.",
+    "ceo": "Steven Wood",
+    "copyright": "© 2026 Lightman Trust Group"
+  }
+  }
