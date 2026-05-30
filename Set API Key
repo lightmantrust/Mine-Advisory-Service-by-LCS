@@ -1,0 +1,5 @@
+export ANTHROPIC_API_KEY=sk-ant-...
+npm install
+npm run dev       # Frontend on localhost:3000
+npm run analyse   # Run 12-agent swarm on a project
+python3 gen_reports.py  # Generate HTML reports
