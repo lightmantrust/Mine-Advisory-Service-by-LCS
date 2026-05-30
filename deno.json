@@ -1,0 +1,15 @@
+{
+  "name": "@lcs/mine-advisory-engine",
+  "version": "6.0.0",
+  "tasks": {
+    "analyse": "deno run --allow-net --allow-read --allow-write --allow-env functions/analyseProject.ts",
+    "ingest": "deno run --allow-net --allow-read --allow-write --allow-env functions/ingestDocument.ts"
+  },
+  "imports": {
+    "@anthropic-ai/sdk": "npm:@anthropic-ai/sdk@0.27.0"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["deno.window"]
+  }
+}

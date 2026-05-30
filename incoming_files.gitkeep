@@ -1,0 +1,4 @@
+# Drop client mining documents here
+# Organised by project_id subfolder: incoming_files/<project_id>/
+# Accepted: PDF, TXT, JSON, MD
+# This folder is gitignored — client documents are never committed
