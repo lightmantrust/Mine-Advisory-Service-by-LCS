@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Document",
+  "description": "Ingested document entity classified by ARIA",
+  "type": "object",
+  "required": ["document_id", "project_id", "document_type", "trust_tier"],
+  "properties": {
+    "document_id": { "type": "string", "format": "uuid" },
+    "project_id": { "type": "string", "format": "uuid" },
+    "filename": { "type": "string" },
+    "document_type": { "type": "string", "enum": ["NI_43-101", "JORC", "Feasibility_Study", "PFS", "PEA", "Scoping_Study", "Met_Testwork", "EIA", "Permitting", "Lab_Certificate", "Financial_Model", "Investor_Presentation", "Vendor_Letter", "Other"] },
+    "trust_tier": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "report_date": { "type": "string", "format": "date" },
+    "authors": { "type": "array", "items": { "type": "string" } },
+    "qp_signed": { "type": "boolean" },
+    "qp_name": { "type": "string" },
+    "independent_firm": { "type": "boolean" },
+    "firm_name": { "type": "string" },
+    "data_vintage_flag": { "type": "boolean" },
+    "vintage_flag_reason": { "type": "string" },
+    "key_metrics_extracted": { "type": "object" },
+    "aria_notes": { "type": "string" }
+  }
+}
