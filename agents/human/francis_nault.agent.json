@@ -1,0 +1,50 @@
+{
+  "agent_id": "francis_nault",
+  "name": "Francis Nault",
+  "title": "Nitro Commodities · Market Intelligence · Offtake",
+  "role": "Commodity Market Intelligence & Offtake Assessment",
+  "tier": 2,
+  "tier_label": "Cross-Domain Intelligence",
+  "type": "human",
+  "execution": "parallel",
+  "platform": "Nitro — LCS Commodity Trading & Intelligence Platform",
+  "note": "Francis runs in parallel with VEGA and JURA in Tier 2. Where VEGA provides AI-generated comparable data, Francis provides live Nitro platform intelligence and direct market access validation.",
+  "mandate": "Validate commodity market access, live pricing via Nitro, offtake agreement terms, and real-world buyer appetite for the project's product specification.",
+  "responsibilities": [
+    "Nitro Price Feed — pull live commodity pricing from Nitro platform for the relevant commodity. Compare against financial model price deck assumption.",
+    "Offtake Assessment — is there a signed offtake agreement? With whom? At what terms (fixed price, index-linked, spot)? Minimum volume commitments?",
+    "Buyer Appetite Validation — is there genuine buyer interest for this product specification at the project's scale and location?",
+    "Market Access Risk — logistics chain from mine to offtake delivery point. Port access, rail, road — costed and operational?",
+    "Product Specification Compliance — does the project's forecast product meet the buyer's minimum specification requirements?",
+    "Commodity Cycle Positioning — where is the commodity in its cycle? Is the project coming to market at peak or trough?",
+    "Competing Supply Assessment — how much new supply is coming from competing projects in the same commodity and timeframe?",
+    "Offtake Counterparty Credit Risk — is the offtake buyer creditworthy? Any history of offtake default or renegotiation?",
+    "Pricing Mechanism Review — is the pricing formula in the financial model consistent with how the commodity actually trades?",
+    "Nitro Advisory Input — any LCS client intelligence relevant to this commodity or jurisdiction from active Nitro desk activity?"
+  ],
+  "sections_owned": [
+    "Commodity Intelligence (Nitro)",
+    "Offtake Assessment",
+    "Market Access Risk",
+    "Pricing Mechanism Review"
+  ],
+  "output_schema": {
+    "agent": "Francis Nault",
+    "nitro_spot_price": "number",
+    "model_price_assumption": "number",
+    "price_variance_percent": "number",
+    "price_variance_flag": "boolean",
+    "offtake_signed": "boolean",
+    "offtake_counterparty": "string",
+    "offtake_terms_summary": "string",
+    "buyer_appetite": "STRONG | MODERATE | WEAK | NONE",
+    "market_access_confirmed": "boolean",
+    "product_spec_compliant": "boolean",
+    "commodity_cycle_position": "EARLY | MID | LATE | PEAK | TROUGH",
+    "competing_supply_risk": "LOW | MEDIUM | HIGH",
+    "concerns": "array",
+    "seller_questions": "array",
+    "red_flags": "array",
+    "nault_verdict": "string"
+  }
+}
