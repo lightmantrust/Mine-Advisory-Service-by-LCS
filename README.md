@@ -36,42 +36,53 @@ Every project is scored across 18 sections (1–100 risk scale, 1=perfect, 100=c
 
 ---
 
-## 🤖 12-Agent AI Swarm — 4-Tier Execution
+## 🤖 16-Agent Swarm (12 AI + 4 Human) — 7-Tier Execution
 
-### TIER 0 — INTAKE (Sequential, must complete first)
-| Agent | Role |
-|-------|------|
-| **ARIA** | Automated document ingestion, Trust Tier classification (1–5), entity schema population |
-| **SIGMA** | Gap mapping, missing document detection, pre-analysis briefing to all QP agents |
+### TIER -1 — PRE-PIPELINE GATE (Hard gate — nothing proceeds without clearance)
+| Agent | Type | Role |
+|-------|------|------|
+| **Juan Gonzalez** | 👤 Human | Intake Officer — KYC/AML compliance, sanctions screening, counterparty verification, deal authentication. FAIL = pipeline blocked entirely. |
 
-### TIER 1 — QP DOMAIN ANALYSIS (Parallel execution)
-| Agent | Domain | Sections |
-|-------|--------|----------|
-| **Dr. Sarah Chen, PhD Geology** | Resource estimation, QA/QC, continuity | 1–3 |
-| **James Okafor, PEng Mining** | Engineering realism, production scheduling | 4–6 |
-| **Linda Marsh, MSc Metallurgy** | Process assumptions, testwork validation | 7–8 |
-| **Tom Rivera, Environmental Sci.** | Permitting, ESG, social licence | 9–10 |
-| **Mike Donovan, CFA Financial** | NPV/IRR, price deck, financing | 11–15 |
+### TIER 0 — INTAKE (Sequential, must complete before Tier 1)
+| Agent | Type | Role |
+|-------|------|------|
+| **ARIA** | 🤖 AI | Automated document ingestion, Trust Tier classification (1–5), entity schema population |
+| **SIGMA** | 🤖 AI | Gap mapping, missing document detection, pre-analysis briefing to all QP agents |
 
-### TIER 2 — CROSS-DOMAIN INTELLIGENCE (After Tier 1)
-| Agent | Role |
-|-------|------|
-| **Marcus Sterling** | Quantitative Strategist — sensitivity, stress-testing, break-even analysis |
-| **VEGA** | Comparables, peer benchmarking, market intelligence, precedent transactions |
-| **JURA** | Jurisdictional analysis — mining law, royalties, tax, political risk |
+### TIER 1 — QP DOMAIN ANALYSIS (Parallel execution — 5 AI + 1 Human simultaneously)
+| Agent | Type | Domain | Sections |
+|-------|------|--------|----------|
+| **Dr. Sarah Chen, PhD Geology** | 🤖 AI | Resource estimation, QA/QC, continuity | 1–3 |
+| **James Okafor, PEng Mining** | 🤖 AI | Engineering realism, production scheduling | 4–6 |
+| **Linda Marsh, MSc Metallurgy** | 🤖 AI | Process assumptions, testwork validation | 7–8 |
+| **Kyle Jackson** | 👤 Human | Metallurgy · Refinery · Flow Sheet · Recovery Rate — downstream flowsheet, refinery agreements, plant-gate recovery validation | Refinery |
+| **Tom Rivera, Environmental Sci.** | 🤖 AI | Permitting, ESG, social licence | 9–10 |
+| **Mike Donovan, CFA Financial** | 🤖 AI | NPV/IRR, price deck, financing | 11–15 |
 
-### TIER 3 — VALIDATION LAYER (After Tier 2)
-| Agent | Role |
-|-------|------|
-| **DELTA** | Data integrity — QA/QC audit, assay validation, statistical integrity |
-| **PHANTOM** | Anti-fraud — seller bias detection, valuation manipulation, deception flags |
-| **Sir Juan Miami, Chief Validation Officer** | Cross-domain Red Team — logic gaps, final audit (Claude Opus 4) |
+### TIER 2 — CROSS-DOMAIN INTELLIGENCE (Parallel execution — 3 AI + 1 Human simultaneously)
+| Agent | Type | Role |
+|-------|------|------|
+| **Marcus Sterling** | 🤖 AI | Quantitative Strategist — sensitivity, stress-testing, break-even analysis |
+| **VEGA** | 🤖 AI | Comparables, peer benchmarking, market intelligence, precedent transactions |
+| **JURA** | 🤖 AI | Jurisdictional analysis — mining law, royalties, tax, political risk |
+| **Francis Nault** | 👤 Human | Nitro Commodities — live commodity pricing via Nitro platform, offtake assessment, market access risk |
+
+### TIER 3 — VALIDATION LAYER (Sequential — DELTA → PHANTOM → Sir Juan Miami)
+| Agent | Type | Role |
+|-------|------|------|
+| **DELTA** | 🤖 AI | Data integrity — QA/QC audit, assay validation, statistical integrity, database audit |
+| **PHANTOM** | 🤖 AI | Anti-fraud — seller bias detection, GMV misrepresentation, deception flags, linguistic bias |
+| **Sir Juan Miami, Chief Validation Officer** | 🤖 AI | Cross-domain Red Team — logic gaps, assumption chains, final audit **(Claude Opus 4)** |
 
 ### TIER 4 — SYNTHESIS & DELIVERY
-| Agent | Role |
-|-------|------|
-| **APEX** | Score computation, report generation, HTML/PDF delivery |
+| Agent | Type | Role |
+|-------|------|------|
+| **APEX** | 🤖 AI | Score computation, ripple chain analysis, buy signal calculation, HTML/PDF report generation |
 
+### TIER 5 — PRINCIPAL SIGN-OFF (Final authority — report release gate)
+| Agent | Type | Role |
+|-------|------|------|
+| **Steven W.** | 👤 Human | Principal QP · Mines & Diamonds · NI 43-101/JORC · PFS/PEA — reviews APEX output, exercises QP authority, issues final institutional sign-off. Diamond projects receive specialist override review. No report released without Steven W. approval. |
 ---
 
 ## 🏗️ Architecture
