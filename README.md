@@ -258,11 +258,7 @@ Mine-Advisory-Service-by-LCS/
 
 ## 🚀 Getting Started
 
-### 1. Set your API key
 
-```bash
-cp .env.example .env
-# Edit .env and add your Anthropic API key
 ---
 
 ## 📊 Mineral Categories Supported
