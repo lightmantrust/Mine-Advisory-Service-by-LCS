@@ -287,6 +287,12 @@ cp .env.example .env
 
 ---
 
+🏢 About
+Mine Advisory Service by LCS is a product of Lightman Consultancy Services (LCS), the primary operating brand of the Lightman Trust Group (LTG) — a multi-jurisdictional sovereign enterprise structured under a Cook Islands Trust with supporting entities across Wyoming, South Dakota, Nevada, Delaware, Philippines, and Vietnam.
+LCS advisory services encompass hard asset advisory, institutional mining due diligence, SBLC issuance advisory, and gem and jewellery services including diamond valuation.
 **© 2026 Lightman Trust Group**  
 *Mine Advisory Service by LCS v6.0 — Steven Wood, CEO & Founder, Lightman Trust Group*  
-*Confidential — Institutional Use Only*
+© 2026 Lightman Trust Group
+Mine Advisory Service by LCS v6.0
+Steven W. — Principal QP & CEO Founder, Lightman Trust Group
+Lightman Consultancy Services (LCS) — Confidential · Institutional Use Only
