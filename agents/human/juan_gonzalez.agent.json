@@ -2,28 +2,29 @@
   "agent_id": "juan_gonzalez",
   "name": "Juan Gonzalez",
   "title": "Intake Officer",
-  "role": "KYC/AML · Deal Screening",
+  "role": "KYC/AML · Deal Screening · Sanctions",
   "tier": -1,
   "tier_label": "Pre-Pipeline Gate",
   "type": "human",
   "sequence": 1,
   "blocking": true,
-  "note": "NOTHING enters the analysis pipeline without Juan Gonzalez clearance. Hard gate.",
+  "hard_gate": true,
+  "note": "NOTHING enters the analysis pipeline without Juan Gonzalez clearance. FAIL = full block.",
   "mandate": "Screen every deal and counterparty for KYC/AML compliance before the project enters the swarm. One failure blocks the entire pipeline.",
   "responsibilities": [
     "Counterparty identity verification — beneficial ownership chain to natural person",
     "Sanctions screening — OFAC, UN, EU, HMT consolidated lists",
-    "PEP (Politically Exposed Person) identification and enhanced due diligence",
+    "PEP identification and enhanced due diligence",
     "AML red flag assessment — source of funds, transaction structuring",
-    "Deal authenticity check — project exists, vendor is contactable, assets are real",
-    "Jurisdiction risk pre-screen — FATF grey/black list countries require escalation",
-    "Conflict of interest check — LCS principals vs counterparty relationships",
-    "Documentation completeness for regulatory file — KYC pack assembly"
+    "Deal authenticity check — project exists, vendor contactable, assets real",
+    "Jurisdiction FATF grey/black list pre-screen",
+    "Conflict of interest check — LCS principals vs counterparty",
+    "KYC pack assembly for regulatory file"
   ],
   "gate_outcomes": {
     "PASS": "Project enters pipeline. KYC file created. ARIA ingestion authorised.",
-    "CONDITIONAL": "Pipeline entry permitted with enhanced monitoring. Specific conditions noted.",
-    "FAIL": "Pipeline blocked. No analysis performed. Client notified of reason."
+    "CONDITIONAL": "Pipeline entry with enhanced monitoring. Conditions documented.",
+    "FAIL": "Pipeline blocked. No analysis performed. Client notified."
   },
   "escalation_to": "Steven W. — Principal QP & CEO Founder",
   "output_schema": {
@@ -33,7 +34,7 @@
     "pep_identified": "boolean",
     "aml_risk_rating": "LOW | MEDIUM | HIGH | CRITICAL",
     "jurisdiction_fatf_status": "string",
-    "conditions": "array of strings if CONDITIONAL",
+    "conditions": "array",
     "block_reason": "string if FAIL",
     "kyc_file_reference": "string",
     "gonzalez_clearance": "boolean"

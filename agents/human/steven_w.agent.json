@@ -7,20 +7,20 @@
   "tier_label": "Principal Sign-Off",
   "type": "human",
   "sequence": "final",
-  "note": "Steven W. is the final authority. He reviews APEX output and all prior agent findings before issuing the institutional sign-off. His verdict supersedes all AI agent outputs.",
   "organisation": "Lightman Trust Group / Lightman Consultancy Services (LCS)",
-  "mandate": "Exercise Principal QP authority over the complete analysis. Review APEX composite score, Sir Juan Miami Red Team finding, and all domain outputs. Issue final institutional sign-off. Diamond projects receive specialist override review.",
+  "note": "Steven W. is the final authority. Reviews APEX output and all prior findings before issuing institutional sign-off. Diamond projects receive specialist override review.",
+  "mandate": "Exercise Principal QP authority over the complete analysis. Issue final institutional sign-off. No report released without Steven W. approval.",
   "responsibilities": [
-    "Principal QP Review — review geological and resource estimation findings as a qualified person under NI 43-101 and JORC Code standards",
-    "NI 43-101 / JORC Compliance Sign-Off — confirm that the analysis framework applied meets institutional and regulatory standards",
-    "PFS/PEA Adequacy Assessment — confirm that the study stage documentation meets the standard required for LCS advisory sign-off",
-    "Diamond Advisory Override — for diamond, gemstone, and coloured stone projects, apply specialist hard asset expertise. Gem quality, size distribution, and rough diamond valuation are beyond standard QP scope and require Steven W. principal review.",
+    "Principal QP Review — geological and resource estimation under NI 43-101 and JORC Code",
+    "NI 43-101 / JORC Compliance Sign-Off — confirm analysis meets institutional and regulatory standards",
+    "PFS/PEA Adequacy Assessment — confirm study stage documentation meets LCS advisory standard",
+    "Diamond Advisory Override — gem quality, size distribution, rough diamond valuation — specialist review",
     "Final Verdict Authority — may affirm, escalate, or override APEX verdict with documented reasoning",
-    "Buy Signal Confirmation — confirm or adjust the buy signal range based on principal QP judgment and current market intelligence",
-    "Seller Question Sign-Off — review and approve the final seller question list before client delivery",
-    "Report Release Authority — no LCS institutional report is released without Steven W. sign-off",
-    "Lightman Trust Group Alignment — confirm that the engagement aligns with LTG investment mandate and entity structure",
-    "CEO Advisory Note — attach executive summary note for board-level or investor committee presentation"
+    "Buy Signal Confirmation — confirm or adjust buy signal range",
+    "Seller Question Sign-Off — review and approve final seller question list",
+    "Report Release Authority — no LCS report released without Steven W. sign-off",
+    "Lightman Trust Group Alignment — confirm engagement aligns with LTG investment mandate",
+    "CEO Advisory Note — executive summary for board-level or investor committee presentation"
   ],
   "specialist_domains": [
     "Diamond grading and valuation (GIA standards)",
@@ -31,8 +31,8 @@
   ],
   "sign_off_outcomes": {
     "APPROVED": "Report released. Verdict confirmed. Buy signal confirmed.",
-    "APPROVED_WITH_CONDITIONS": "Report released with additional conditions noted by Steven W.",
-    "ESCALATED": "Specific findings require additional expert review before release.",
+    "APPROVED_WITH_CONDITIONS": "Report released with additional conditions noted.",
+    "ESCALATED": "Specific findings require additional expert review.",
     "OVERRIDDEN": "Steven W. principal QP judgment supersedes APEX verdict. Full reasoning documented."
   },
   "output_schema": {
