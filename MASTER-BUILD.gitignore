@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.npm/
+
+# Build output
+dist/
+build/
+
+# Deno cache
+.deno/
+
+# Environment — NEVER commit API keys
+.env
+.env.local
+.env.*.local
+
+# Generated reports (output only)
+lcs_reports/*/report.html
+lcs_reports/*/result.json
+
+# Incoming client documents — confidential
+incoming_files/*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Vite
+*.local
